@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCUMENT OBJECT</title>
+</head>
+<body>
+    <h1 name = "hid1">DOC OBJECT1</h1>
+    <h3 name = "hid1">OTHER OBJECT</h3>
+
+    <script>
+        let dDay = prompt("Name","DODONG");
+        let dMonth = prompt("Number 1-12","2");
+
+        let hometag = document.getElementsByName("hid1");
+        hometag[0].innerHTML = dDay;
+        hometag[1].innerHTML = dMonth;
+        for(index = 1; index  <= parseInt(dMonth); index++) {
+            let para = document.createElement("p");
+            para.innerHTML = index;
+            document.body.appendChild(para);
+        }
+    </script>
+</body>
+</html>
